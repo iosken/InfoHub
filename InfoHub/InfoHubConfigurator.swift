@@ -17,7 +17,10 @@ extension InfoHubConfigurator {
     func configure(with viewController: InfoHubViewController) {
         let presenter = InfoHubPresenter()
         let interactor = InfoHubInteractor()
+        let router = InfoHubRouter()
         viewController.infoHubInteractor = interactor
+        viewController.infoHubRouter = router
+        router.viewController = viewController
         presenter.viewController = viewController
         interactor.infoHubPresenter = presenter
     }

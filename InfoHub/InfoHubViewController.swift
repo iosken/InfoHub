@@ -16,6 +16,7 @@ final class InfoHubViewController: UIViewController {
     @IBOutlet var lastInfoTitleOutlet: UILabel!
     
     var infoHubInteractor: InfoHubBusinessLogic?
+    var infoHubRouter: InfoHubRouter?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nil)
@@ -35,7 +36,10 @@ final class InfoHubViewController: UIViewController {
         infoHubInteractor?.getInfo()
     }
     
-
+    @IBAction func showInfoHubListTaped() {
+        infoHubRouter?.navigateToInfoHubList()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -51,7 +55,7 @@ final class InfoHubViewController: UIViewController {
 
 extension InfoHubViewController: InfoHubDisplayLogic {
     func showInfo(infoNewsCount: String, lastInfoTitle: String) {
-        infoNewsCountOutlet.text = infoNewsCount
-        lastInfoTitleOutlet.text = lastInfoTitle
+        infoNewsCountOutlet.text = "Current number of info news is \(infoNewsCount)"
+        lastInfoTitleOutlet.text = "Last info title \(lastInfoTitle)"
     }
 }
