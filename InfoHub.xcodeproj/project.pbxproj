@@ -13,6 +13,7 @@
 		C34C15CE2A9DAF7700FC7A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C15CC2A9DAF7700FC7A70 /* LaunchScreen.storyboard */; };
 		C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15DA2A9DB19F00FC7A70 /* InfoHubViewController.swift */; };
 		C34C15DD2A9DB1CA00FC7A70 /* InfoHubViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C15DC2A9DB1CA00FC7A70 /* InfoHubViewController.storyboard */; };
+		C34C15E22A9DB46600FC7A70 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15E12A9DB46600FC7A70 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C34C15CF2A9DAF7700FC7A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C34C15DA2A9DB19F00FC7A70 /* InfoHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubViewController.swift; sourceTree = "<group>"; };
 		C34C15DC2A9DB1CA00FC7A70 /* InfoHubViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoHubViewController.storyboard; sourceTree = "<group>"; };
+		C34C15E12A9DB46600FC7A70 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C34C15C02A9DAF7500FC7A70 /* InfoHub */ = {
 			isa = PBXGroup;
 			children = (
+				C34C15DE2A9DB3C100FC7A70 /* Services */,
 				C34C15D52A9DB08C00FC7A70 /* App */,
 				C34C15D62A9DB0AB00FC7A70 /* Sources */,
 				C34C15CC2A9DAF7700FC7A70 /* LaunchScreen.storyboard */,
@@ -81,6 +84,14 @@
 				C34C15CA2A9DAF7700FC7A70 /* Assets.xcassets */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C34C15DE2A9DB3C100FC7A70 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C34C15E12A9DB46600FC7A70 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34C15C22A9DAF7500FC7A70 /* AppDelegate.swift in Sources */,
+				C34C15E22A9DB46600FC7A70 /* DataStore.swift in Sources */,
 				C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */,
 				C34C15C42A9DAF7500FC7A70 /* SceneDelegate.swift in Sources */,
 			);
