@@ -7,10 +7,32 @@
 
 import UIKit
 
-final class InfoHubViewController: UIViewController {
+protocol InfoHubDisplayLogic {
+    func showInfo(infoNewsCount: String, lastInfoTitle: String)
+}
 
+final class InfoHubViewController: UIViewController {
+    @IBOutlet var infoNewsCountOutlet: UILabel!
+    @IBOutlet var lastInfoTitleOutlet: UILabel!
+    
+    var infoHubInteractor: InfoHubBusinessLogic?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nil)
+        
+        InfoHubConfigurator.shared.configure(with: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        InfoHubConfigurator.shared.configure(with: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        infoHubInteractor?.getInfo()
     }
     
 
@@ -24,4 +46,12 @@ final class InfoHubViewController: UIViewController {
     }
     */
 
+}
+
+
+extension InfoHubViewController: InfoHubDisplayLogic {
+    func showInfo(infoNewsCount: String, lastInfoTitle: String) {
+        infoNewsCountOutlet.text = infoNewsCount
+        lastInfoTitleOutlet.text = lastInfoTitle
+    }
 }
