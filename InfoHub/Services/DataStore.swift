@@ -7,16 +7,7 @@
 
 import Foundation
 
-protocol DataStoreOutputFormat {
-    var infoId: String { get }
-    var title: String { get }
-    var subTitle: String { get }
-    var author: String { get }
-    var siteLink: String { get }
-    var image: String? { get } // link
-}
-
-struct DataStoreModel: DataStoreOutputFormat {
+struct DataStoreModel {
     var infoId: String
     var title: String
     var subTitle: String

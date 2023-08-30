@@ -7,26 +7,47 @@
 
 import UIKit
 
-class InfoHubListViewController: UITableViewController {
+protocol InfoHubListDisplayLogic: AnyObject {
+    func display(data: [InfoHubListCellViewModel])
+}
 
+final class InfoHubListViewController: UITableViewController {
+    
+    // MARK: - Public vars
+    var infoHubListRouter: InfoHubListRoutingLogic?
+    var infoHubListInteractor: InfoHubListBusinessLogic?
+    
+    var dataToDisplay: [InfoHubListCellViewModel] = []
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nil)
+        
+        InfoHubListConfigurator.shared.configure(with: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        InfoHubListConfigurator.shared.configure(with: self)
+    }
+
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "InfoHubListCell", bundle: nil), forCellReuseIdentifier: InfoHubListCell.identifier)
+        
+        infoHubListInteractor?.fetchData()
+        
+        print(dataToDisplay.last?.infoText ?? "no data coming")
+        
+        print("data must be loaded")
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    // MARK: - TableView data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dataToDisplay.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
@@ -34,49 +55,17 @@ class InfoHubListViewController: UITableViewController {
                 withIdentifier: InfoHubListCell.identifier,
                 for: indexPath
             ) as? InfoHubListCell
-        else { return UITableViewCell()}
-
-        #warning("Next step")
-        //cell.setup(data: <#T##InfoHubListCellViewModel#>)
+        else { return UITableViewCell() }
+        
+        cell.setup(data: dataToDisplay[indexPath.row])
 
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+//    // MARK: - TableView delegate
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        200
+//    }
 
     /*
     // MARK: - Navigation
@@ -88,4 +77,14 @@ class InfoHubListViewController: UITableViewController {
     }
     */
 
+}
+
+extension InfoHubListViewController: InfoHubListDisplayLogic {
+    
+    func display(data: [InfoHubListCellViewModel]) {
+        dataToDisplay.removeAll()
+        dataToDisplay.append(contentsOf: data)
+        tableView.reloadData()
+    }
+    
 }

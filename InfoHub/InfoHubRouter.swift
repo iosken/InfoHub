@@ -13,11 +13,15 @@ protocol InfoHubRoutingLogic {
 
 
 class InfoHubRouter {
+    
+    // MARK: External vars
     weak var viewController: UIViewController?
+    
 }
 
-
+// MARK: InfoHub Routing Logic
 extension InfoHubRouter: InfoHubRoutingLogic {
+    
     func navigateToInfoHubList() {
         let storyboard = UIStoryboard.init(name: "InfoHubListViewController", bundle: nil)
         

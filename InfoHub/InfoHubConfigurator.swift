@@ -13,6 +13,7 @@ final class InfoHubConfigurator {
     private init() {}
 }
 
+// MARK: InfoHub Configuration
 extension InfoHubConfigurator {
     func configure(with viewController: InfoHubViewController) {
         let presenter = InfoHubPresenter()

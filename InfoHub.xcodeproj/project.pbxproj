@@ -23,6 +23,10 @@
 		C34C15F62A9DEE2700FC7A70 /* InfoHubListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15F42A9DEE2700FC7A70 /* InfoHubListCell.swift */; };
 		C34C15F72A9DEE2700FC7A70 /* InfoHubListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34C15F52A9DEE2700FC7A70 /* InfoHubListCell.xib */; };
 		C34C15FB2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15FA2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift */; };
+		C34C15FD2A9EE61A00FC7A70 /* InfoHubListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15FC2A9EE61A00FC7A70 /* InfoHubListPresenter.swift */; };
+		C34C15FF2A9EE71200FC7A70 /* InfoHubListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15FE2A9EE71200FC7A70 /* InfoHubListInteractor.swift */; };
+		C34C16012A9EEC2900FC7A70 /* InfoHubListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16002A9EEC2900FC7A70 /* InfoHubListRouter.swift */; };
+		C34C16032A9F47F300FC7A70 /* InfoHubListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16022A9F47F300FC7A70 /* InfoHubListConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		C34C15F42A9DEE2700FC7A70 /* InfoHubListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListCell.swift; sourceTree = "<group>"; };
 		C34C15F52A9DEE2700FC7A70 /* InfoHubListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoHubListCell.xib; sourceTree = "<group>"; };
 		C34C15FA2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListCellViewModel.swift; sourceTree = "<group>"; };
+		C34C15FC2A9EE61A00FC7A70 /* InfoHubListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListPresenter.swift; sourceTree = "<group>"; };
+		C34C15FE2A9EE71200FC7A70 /* InfoHubListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListInteractor.swift; sourceTree = "<group>"; };
+		C34C16002A9EEC2900FC7A70 /* InfoHubListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListRouter.swift; sourceTree = "<group>"; };
+		C34C16022A9F47F300FC7A70 /* InfoHubListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +84,13 @@
 		C34C15C02A9DAF7500FC7A70 /* InfoHub */ = {
 			isa = PBXGroup;
 			children = (
+				C34C16042A9F531000FC7A70 /* InfoHubListDetails */,
 				C34C15EB2A9DE6AA00FC7A70 /* InfoHubList */,
 				C34C15DE2A9DB3C100FC7A70 /* Services */,
 				C34C15D52A9DB08C00FC7A70 /* App */,
 				C34C15D62A9DB0AB00FC7A70 /* Sources */,
-				C34C15CC2A9DAF7700FC7A70 /* LaunchScreen.storyboard */,
 				C34C15DC2A9DB1CA00FC7A70 /* InfoHubViewController.storyboard */,
+				C34C15CC2A9DAF7700FC7A70 /* LaunchScreen.storyboard */,
 				C34C15DA2A9DB19F00FC7A70 /* InfoHubViewController.swift */,
 				C34C15E32A9DC22F00FC7A70 /* InfoHubPresenter.swift */,
 				C34C15E52A9DC58200FC7A70 /* InfoHubInteractor.swift */,
@@ -123,6 +132,10 @@
 				C34C15F22A9DEDDE00FC7A70 /* Cells */,
 				C34C15EE2A9DE6FB00FC7A70 /* InfoHubListViewController.storyboard */,
 				C34C15F02A9DE81C00FC7A70 /* InfoHubListViewController.swift */,
+				C34C15FC2A9EE61A00FC7A70 /* InfoHubListPresenter.swift */,
+				C34C15FE2A9EE71200FC7A70 /* InfoHubListInteractor.swift */,
+				C34C16002A9EEC2900FC7A70 /* InfoHubListRouter.swift */,
+				C34C16022A9F47F300FC7A70 /* InfoHubListConfigurator.swift */,
 			);
 			path = InfoHubList;
 			sourceTree = "<group>";
@@ -138,11 +151,18 @@
 		C34C15F32A9DEDF400FC7A70 /* InfoHubListCell */ = {
 			isa = PBXGroup;
 			children = (
-				C34C15F42A9DEE2700FC7A70 /* InfoHubListCell.swift */,
 				C34C15F52A9DEE2700FC7A70 /* InfoHubListCell.xib */,
+				C34C15F42A9DEE2700FC7A70 /* InfoHubListCell.swift */,
 				C34C15FA2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift */,
 			);
 			path = InfoHubListCell;
+			sourceTree = "<group>";
+		};
+		C34C16042A9F531000FC7A70 /* InfoHubListDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoHubListDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,12 +240,16 @@
 			files = (
 				C34C15C22A9DAF7500FC7A70 /* AppDelegate.swift in Sources */,
 				C34C15F62A9DEE2700FC7A70 /* InfoHubListCell.swift in Sources */,
+				C34C15FF2A9EE71200FC7A70 /* InfoHubListInteractor.swift in Sources */,
 				C34C15E42A9DC22F00FC7A70 /* InfoHubPresenter.swift in Sources */,
 				C34C15EA2A9DE5E900FC7A70 /* InfoHubRouter.swift in Sources */,
+				C34C15FD2A9EE61A00FC7A70 /* InfoHubListPresenter.swift in Sources */,
+				C34C16012A9EEC2900FC7A70 /* InfoHubListRouter.swift in Sources */,
 				C34C15E22A9DB46600FC7A70 /* DataStore.swift in Sources */,
 				C34C15FB2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift in Sources */,
 				C34C15F12A9DE81C00FC7A70 /* InfoHubListViewController.swift in Sources */,
 				C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */,
+				C34C16032A9F47F300FC7A70 /* InfoHubListConfigurator.swift in Sources */,
 				C34C15E62A9DC58200FC7A70 /* InfoHubInteractor.swift in Sources */,
 				C34C15C42A9DAF7500FC7A70 /* SceneDelegate.swift in Sources */,
 				C34C15E82A9DC92500FC7A70 /* InfoHubConfigurator.swift in Sources */,

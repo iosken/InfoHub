@@ -8,15 +8,19 @@
 import Foundation
 
 protocol InfoHubPresentatioinLogic {
-    func present(data: [DataStoreOutputFormat])
+    func present(data: [DataStoreModel])
 }
 
 final class InfoHubPresenter {
+    
+    // MARK: External vars
     var viewController: InfoHubDisplayLogic?
 }
 
+
+// MARK: InfoHub Presentatioin Logic
 extension InfoHubPresenter: InfoHubPresentatioinLogic {
-    func present(data: [DataStoreOutputFormat]) {
+    func present(data: [DataStoreModel]) {
         viewController?.showInfo(
             infoNewsCount: data.count.formatted(),
             lastInfoTitle: data.last?.title ?? ""
