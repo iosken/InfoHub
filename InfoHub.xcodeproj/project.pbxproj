@@ -27,6 +27,9 @@
 		C34C15FF2A9EE71200FC7A70 /* InfoHubListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C15FE2A9EE71200FC7A70 /* InfoHubListInteractor.swift */; };
 		C34C16012A9EEC2900FC7A70 /* InfoHubListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16002A9EEC2900FC7A70 /* InfoHubListRouter.swift */; };
 		C34C16032A9F47F300FC7A70 /* InfoHubListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16022A9F47F300FC7A70 /* InfoHubListConfigurator.swift */; };
+		C34C160A2AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */; };
+		C34C160C2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */; };
+		C34C160E2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		C34C15FE2A9EE71200FC7A70 /* InfoHubListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListInteractor.swift; sourceTree = "<group>"; };
 		C34C16002A9EEC2900FC7A70 /* InfoHubListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListRouter.swift; sourceTree = "<group>"; };
 		C34C16022A9F47F300FC7A70 /* InfoHubListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListConfigurator.swift; sourceTree = "<group>"; };
+		C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsViewController.swift; sourceTree = "<group>"; };
+		C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoHubListDetailsViewController.storyboard; sourceTree = "<group>"; };
+		C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,9 @@
 		C34C16042A9F531000FC7A70 /* InfoHubListDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */,
+				C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */,
+				C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */,
 			);
 			path = InfoHubListDetails;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34C160C2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard in Resources */,
 				C34C15CE2A9DAF7700FC7A70 /* LaunchScreen.storyboard in Resources */,
 				C34C15F72A9DEE2700FC7A70 /* InfoHubListCell.xib in Resources */,
 				C34C15EF2A9DE6FB00FC7A70 /* InfoHubListViewController.storyboard in Resources */,
@@ -239,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34C15C22A9DAF7500FC7A70 /* AppDelegate.swift in Sources */,
+				C34C160E2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift in Sources */,
 				C34C15F62A9DEE2700FC7A70 /* InfoHubListCell.swift in Sources */,
 				C34C15FF2A9EE71200FC7A70 /* InfoHubListInteractor.swift in Sources */,
 				C34C15E42A9DC22F00FC7A70 /* InfoHubPresenter.swift in Sources */,
@@ -251,6 +262,7 @@
 				C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */,
 				C34C16032A9F47F300FC7A70 /* InfoHubListConfigurator.swift in Sources */,
 				C34C15E62A9DC58200FC7A70 /* InfoHubInteractor.swift in Sources */,
+				C34C160A2AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift in Sources */,
 				C34C15C42A9DAF7500FC7A70 /* SceneDelegate.swift in Sources */,
 				C34C15E82A9DC92500FC7A70 /* InfoHubConfigurator.swift in Sources */,
 			);

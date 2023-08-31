@@ -37,14 +37,9 @@ final class InfoHubListViewController: UITableViewController {
         tableView.register(UINib(nibName: "InfoHubListCell", bundle: nil), forCellReuseIdentifier: InfoHubListCell.identifier)
         
         infoHubListInteractor?.fetchData()
-        
-        print(dataToDisplay.last?.infoText ?? "no data coming")
-        
-        print("data must be loaded")
     }
 
     // MARK: - TableView data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataToDisplay.count
     }
@@ -62,10 +57,10 @@ final class InfoHubListViewController: UITableViewController {
         return cell
     }
     
-//    // MARK: - TableView delegate
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        200
-//    }
+    // MARK: - TableView delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     /*
     // MARK: - Navigation
@@ -77,6 +72,12 @@ final class InfoHubListViewController: UITableViewController {
     }
     */
 
+}
+
+extension InfoHubListViewController: InfoHubListCellDelegate {
+    func infoHubListCellTaped(with id: Int) {
+        // ROUTER -> New Scene
+    }
 }
 
 extension InfoHubListViewController: InfoHubListDisplayLogic {

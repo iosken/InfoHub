@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol InfoHubListCellDelegate {
+    func infoHubListCellTaped(with id: Int)
+}
+
 final class InfoHubListCell: UITableViewCell {
 
     @IBOutlet var titleInfoLabel: UILabel!
@@ -14,6 +18,10 @@ final class InfoHubListCell: UITableViewCell {
     @IBOutlet var authorLabel: UILabel!
     
     static let identifier = "InfoHubListCell"
+    
+    // MARK: - Private vars
+    var infoHubCellHubId: Int?
+    var delegate: InfoHubListCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,12 +31,14 @@ final class InfoHubListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func nextCellButtonTaped() {
-        
+    @IBAction func readButtonTaped() {
+        guard let infoHubCellHubId = infoHubCellHubId else { return }
+        delegate?.infoHubListCellTaped(with: infoHubCellHubId)
     }
     
     func setup(data: InfoHubListCellViewModel) {
-        titleInfoLabel.text = "\(data.infoId). " + data.infoTitle
+        infoHubCellHubId = data.infoId
+        titleInfoLabel.text = "\(data.infoId) " + data.infoTitle
         textPreviewLabel.text = data.infoText
         authorLabel.text = data.infoAutor
     }
