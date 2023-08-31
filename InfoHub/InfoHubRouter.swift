@@ -12,7 +12,7 @@ protocol InfoHubRoutingLogic {
 }
 
 
-class InfoHubRouter {
+final class InfoHubRouter {
     
     // MARK: External vars
     weak var viewController: UIViewController?
@@ -28,7 +28,7 @@ extension InfoHubRouter: InfoHubRoutingLogic {
         guard let infoHubListVC = storyboard.instantiateViewController(
             identifier: "InfoHubListViewController"
         ) as? InfoHubListViewController else { return }
-
+        
         viewController?.navigationController?.pushViewController(infoHubListVC, animated: true)
     }
     

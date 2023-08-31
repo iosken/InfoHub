@@ -27,8 +27,6 @@ extension InfoHubListPresenter: InfoHubListPresentationLogic {
             )
         }
         
-        print("presenter push to display with \(dataToDisplay.last?.infoTitle ?? "no data")")
-        
         viewController?.display(data: dataToDisplay)
     }
     

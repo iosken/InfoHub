@@ -22,8 +22,8 @@ final class InfoHubPresenter {
 extension InfoHubPresenter: InfoHubPresentatioinLogic {
     func present(data: [DataStoreModel]) {
         viewController?.showInfo(
-            infoNewsCount: data.count.formatted(),
-            lastInfoTitle: data.last?.title ?? ""
+            infoNewsCount: "News count is \(data.count.formatted())",
+            lastInfoTitle: "Last news title \(data.last?.title ?? "")"
         )
     }
 }

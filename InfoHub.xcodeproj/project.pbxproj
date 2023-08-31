@@ -30,6 +30,9 @@
 		C34C160A2AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */; };
 		C34C160C2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */; };
 		C34C160E2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */; };
+		C34C16102AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */; };
+		C34C16122AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */; };
+		C34C16142AA0700000FC7A70 /* InfoHubListDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsViewController.swift; sourceTree = "<group>"; };
 		C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoHubListDetailsViewController.storyboard; sourceTree = "<group>"; };
 		C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsInteractor.swift; sourceTree = "<group>"; };
+		C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoHubListDetailsPresenter.swift; sourceTree = "<group>"; };
+		C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsConfigurator.swift; sourceTree = "<group>"; };
+		C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,9 @@
 				C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */,
 				C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */,
 				C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */,
+				C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */,
+				C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */,
+				C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */,
 			);
 			path = InfoHubListDetails;
 			sourceTree = "<group>";
@@ -255,8 +264,11 @@
 				C34C15E42A9DC22F00FC7A70 /* InfoHubPresenter.swift in Sources */,
 				C34C15EA2A9DE5E900FC7A70 /* InfoHubRouter.swift in Sources */,
 				C34C15FD2A9EE61A00FC7A70 /* InfoHubListPresenter.swift in Sources */,
+				C34C16142AA0700000FC7A70 /* InfoHubListDetailsRouter.swift in Sources */,
 				C34C16012A9EEC2900FC7A70 /* InfoHubListRouter.swift in Sources */,
 				C34C15E22A9DB46600FC7A70 /* DataStore.swift in Sources */,
+				C34C16102AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift in Sources */,
+				C34C16122AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift in Sources */,
 				C34C15FB2A9DF1D100FC7A70 /* InfoHubListCellViewModel.swift in Sources */,
 				C34C15F12A9DE81C00FC7A70 /* InfoHubListViewController.swift in Sources */,
 				C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */,

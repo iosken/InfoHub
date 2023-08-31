@@ -22,8 +22,7 @@ final class InfoHubListInteractor {
 extension InfoHubListInteractor: InfoHubListBusinessLogic {
     func fetchData() {
         let dataToPresent = DataStore.shared.getTenInfoForHub()
-        
-        print("Interactor data coming with \(dataToPresent.last?.title ?? "no data")")
+
         infoHubListPresenter?.present(dataToPresent: dataToPresent)
     }
 }

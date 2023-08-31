@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol InfoHubListDetailsDisplayLogic {
+protocol InfoHubListDetailsDisplayLogic: AnyObject {
     func displayContent(title: String, text: String)
 }
 
@@ -17,15 +17,27 @@ final class InfoHubListDetailsViewController: UIViewController {
     @IBOutlet var titleLabelOutlet: UILabel!
     @IBOutlet var textLabelOutlet: UILabel!
     
+    // MARK: - Public properties
+    var infoHubListDetailsInteractor: InfoHubListDetailsBusinessLogic?
+    var infoHubListDetailsRouter: (InfoHubListDetailsRoutingLogic & InfoHubListDetailsDataPassingProtocol)?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        InfoHubListDetailsConfigurator.shared.configure(with: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        InfoHubListDetailsConfigurator.shared.configure(with: self)
+    }
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        infoHubListDetailsInteractor?.fetchData()
     }
     
-
-
 }
 
 extension InfoHubListDetailsViewController: InfoHubListDetailsDisplayLogic {

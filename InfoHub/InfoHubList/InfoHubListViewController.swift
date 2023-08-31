@@ -29,7 +29,7 @@ final class InfoHubListViewController: UITableViewController {
         super.init(coder: coder)
         InfoHubListConfigurator.shared.configure(with: self)
     }
-
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ final class InfoHubListViewController: UITableViewController {
         
         infoHubListInteractor?.fetchData()
     }
-
+    
     // MARK: - TableView data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataToDisplay.count
@@ -52,8 +52,10 @@ final class InfoHubListViewController: UITableViewController {
             ) as? InfoHubListCell
         else { return UITableViewCell() }
         
+        cell.delegate = self
+        
         cell.setup(data: dataToDisplay[indexPath.row])
-
+        
         return cell
     }
     
@@ -61,22 +63,23 @@ final class InfoHubListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension InfoHubListViewController: InfoHubListCellDelegate {
     func infoHubListCellTaped(with id: Int) {
-        // ROUTER -> New Scene
+        if infoHubListRouter != nil {} else { print("No router found") }
+        infoHubListRouter?.navigateToListDetails(infoHubCellID: id)
     }
 }
 

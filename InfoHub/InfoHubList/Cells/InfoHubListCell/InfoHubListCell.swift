@@ -33,6 +33,11 @@ final class InfoHubListCell: UITableViewCell {
     
     @IBAction func readButtonTaped() {
         guard let infoHubCellHubId = infoHubCellHubId else { return }
+        
+        print("infoHubCellHubId coming with \(infoHubCellHubId)")
+        
+        if delegate == nil { print("delegate is nil") }
+        
         delegate?.infoHubListCellTaped(with: infoHubCellHubId)
     }
     

@@ -41,21 +41,21 @@ final class InfoHubViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 
 extension InfoHubViewController: InfoHubDisplayLogic {
     func showInfo(infoNewsCount: String, lastInfoTitle: String) {
-        infoNewsCountOutlet.text = "Current number of info news is \(infoNewsCount)"
-        lastInfoTitleOutlet.text = "Last info title \(lastInfoTitle)"
+        infoNewsCountOutlet.text = infoNewsCount
+        lastInfoTitleOutlet.text = lastInfoTitle
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InfoHubListConfigurator {
+final class InfoHubListConfigurator {
     static let shared = InfoHubListConfigurator()
     
     private init() {}
@@ -22,6 +22,7 @@ extension InfoHubListConfigurator {
         viewController.infoHubListRouter = router
         interactor.infoHubListPresenter = presenter
         presenter.viewController = viewController
+        router.viewController = viewController
     }
 }
 
