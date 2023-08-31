@@ -11,7 +11,6 @@ protocol InfoHubRoutingLogic {
     func navigateToInfoHubList()
 }
 
-
 final class InfoHubRouter {
     
     // MARK: External vars
@@ -21,7 +20,6 @@ final class InfoHubRouter {
 
 // MARK: InfoHub Routing Logic
 extension InfoHubRouter: InfoHubRoutingLogic {
-    
     func navigateToInfoHubList() {
         let storyboard = UIStoryboard.init(name: "InfoHubListViewController", bundle: nil)
         
@@ -31,7 +29,4 @@ extension InfoHubRouter: InfoHubRoutingLogic {
         
         viewController?.navigationController?.pushViewController(infoHubListVC, animated: true)
     }
-    
-    
-    
 }

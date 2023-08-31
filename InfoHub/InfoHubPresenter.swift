@@ -12,7 +12,6 @@ protocol InfoHubPresentatioinLogic {
 }
 
 final class InfoHubPresenter {
-    
     // MARK: External vars
     var viewController: InfoHubDisplayLogic?
 }

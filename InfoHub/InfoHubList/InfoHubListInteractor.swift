@@ -12,10 +12,8 @@ protocol InfoHubListBusinessLogic {
 }
 
 final class InfoHubListInteractor {
-    
     // MARK: - Public vars
     var infoHubListPresenter: InfoHubListPresenter?
-    
 }
 
 // MARK: BusinessLogic

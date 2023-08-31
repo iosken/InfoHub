@@ -40,6 +40,7 @@ final class InfoHubListDetailsViewController: UIViewController {
     
 }
 
+// MARK: - InfoHubListDetails Display Logic
 extension InfoHubListDetailsViewController: InfoHubListDetailsDisplayLogic {
     func displayContent(title: String, text: String) {
         titleLabelOutlet.text = title

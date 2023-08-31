@@ -13,6 +13,7 @@ protocol InfoHubListCellDelegate {
 
 final class InfoHubListCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet var titleInfoLabel: UILabel!
     @IBOutlet var textPreviewLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!

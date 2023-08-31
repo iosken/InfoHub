@@ -84,11 +84,9 @@ extension InfoHubListViewController: InfoHubListCellDelegate {
 }
 
 extension InfoHubListViewController: InfoHubListDisplayLogic {
-    
     func display(data: [InfoHubListCellViewModel]) {
         dataToDisplay.removeAll()
         dataToDisplay.append(contentsOf: data)
         tableView.reloadData()
     }
-    
 }

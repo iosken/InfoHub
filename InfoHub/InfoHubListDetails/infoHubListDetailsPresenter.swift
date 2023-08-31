@@ -16,15 +16,14 @@ final class infoHubListDetailsPresenter {
     weak var viewController: InfoHubListDetailsDisplayLogic?
 }
 
+// MARK: - infoHubListDetails Presentation Logic
 extension infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic {
-    
     func present(data: DataStoreModel) {
         let title = data.title
         let text = data.subTitle
         
         viewController?.displayContent(title: title, text: text)
     }
-    
 }
 
 

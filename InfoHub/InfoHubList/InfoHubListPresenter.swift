@@ -29,5 +29,4 @@ extension InfoHubListPresenter: InfoHubListPresentationLogic {
         
         viewController?.display(data: dataToDisplay)
     }
-    
 }
