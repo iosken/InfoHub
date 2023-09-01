@@ -8,16 +8,15 @@
 import Foundation
 
 protocol InfoHubListPresentationLogic {
-    func present(dataToPresent: [DataStoreModel])
+    func present(dataToPresent: [InfoHubSubject])
 }
 
 final class InfoHubListPresenter {
     var viewController: InfoHubListViewController?
 }
 
-
 extension InfoHubListPresenter: InfoHubListPresentationLogic {
-    func present(dataToPresent: [DataStoreModel]) {
+    func present(dataToPresent: [InfoHubSubject]) {
         let dataToDisplay = dataToPresent.map { dataStoreModel -> InfoHubListCellViewModel in
             InfoHubListCellViewModel(
                 infoId: Int(dataStoreModel.infoId) ?? 0,

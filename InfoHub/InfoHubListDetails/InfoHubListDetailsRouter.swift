@@ -12,11 +12,11 @@ protocol InfoHubListDetailsRoutingLogic {
 }
 
 protocol InfoHubListDetailsDataPassingProtocol {
-    var storeCellIndex: InfoHubListDetailsStoreProtocol? { get set }
+    var storeCellIndex: InfoHubListDetailsDataStore? { get set }
 }
 
 final class InfoHubListDetailsRouter: InfoHubListDetailsDataPassingProtocol {
-    var storeCellIndex: InfoHubListDetailsStoreProtocol?
+    var storeCellIndex: InfoHubListDetailsDataStore?
 }
 
 extension InfoHubListDetailsRouter: InfoHubListDetailsRoutingLogic {

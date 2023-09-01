@@ -11,21 +11,26 @@ protocol InfoHubListDetailsBusinessLogic {
     func fetchData()
 }
 
-protocol InfoHubListDetailsStoreProtocol {
+protocol InfoHubListDetailsDataStore {
+    var infoHubSubjects: InfoHubSubject? { get }
+    
     var cellID: Int { get set }
 }
 
-final class InfoHubListDetailsInteractor: InfoHubListDetailsStoreProtocol {
+final class InfoHubListDetailsInteractor: InfoHubListDetailsDataStore {
     var infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic?
     
     var cellID: Int = 0
+    
+    var infoHubSubjects: InfoHubSubject?
 }
 
 // MARK: - InfoHubListDetails Business Logic
 extension InfoHubListDetailsInteractor: InfoHubListDetailsBusinessLogic {
     func fetchData() {
-        print("Interactor get id with \(cellID)")
-        let dataStoreModel = DataStore.shared.getTenInfoForHub()[cellID]
-        infoHubListDetailsPresenter?.present(data: dataStoreModel)
+        infoHubSubjects = DataStore.shared.getTenInfoForHub()[cellID]
+        guard let infoHubSubjects = infoHubSubjects else { return }
+        
+        infoHubListDetailsPresenter?.present(data: infoHubSubjects)
     }
 }

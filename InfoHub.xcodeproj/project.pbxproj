@@ -33,6 +33,7 @@
 		C34C16102AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */; };
 		C34C16122AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */; };
 		C34C16142AA0700000FC7A70 /* InfoHubListDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */; };
+		C34C16172AA1B64F00FC7A70 /* InfoHubSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16162AA1B64F00FC7A70 /* InfoHubSubject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoHubListDetailsPresenter.swift; sourceTree = "<group>"; };
 		C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsConfigurator.swift; sourceTree = "<group>"; };
 		C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsRouter.swift; sourceTree = "<group>"; };
+		C34C16162AA1B64F00FC7A70 /* InfoHubSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubSubject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				C34C16042A9F531000FC7A70 /* InfoHubListDetails */,
 				C34C15EB2A9DE6AA00FC7A70 /* InfoHubList */,
 				C34C15DE2A9DB3C100FC7A70 /* Services */,
+				C34C16152AA1B64100FC7A70 /* Models */,
 				C34C15D52A9DB08C00FC7A70 /* App */,
 				C34C15D62A9DB0AB00FC7A70 /* Sources */,
 				C34C15DC2A9DB1CA00FC7A70 /* InfoHubViewController.storyboard */,
@@ -183,6 +186,14 @@
 			path = InfoHubListDetails;
 			sourceTree = "<group>";
 		};
+		C34C16152AA1B64100FC7A70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C34C16162AA1B64F00FC7A70 /* InfoHubSubject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34C16172AA1B64F00FC7A70 /* InfoHubSubject.swift in Sources */,
 				C34C15C22A9DAF7500FC7A70 /* AppDelegate.swift in Sources */,
 				C34C160E2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift in Sources */,
 				C34C15F62A9DEE2700FC7A70 /* InfoHubListCell.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol infoHubListDetailsPresentationLogic {
-    func present(data: DataStoreModel)
+    func present(data: InfoHubSubject)
 }
 
 final class infoHubListDetailsPresenter {
@@ -18,7 +18,7 @@ final class infoHubListDetailsPresenter {
 
 // MARK: - infoHubListDetails Presentation Logic
 extension infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic {
-    func present(data: DataStoreModel) {
+    func present(data: InfoHubSubject) {
         let title = data.title
         let text = data.subTitle
         

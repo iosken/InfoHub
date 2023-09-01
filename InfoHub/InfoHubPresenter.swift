@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InfoHubPresentatioinLogic {
-    func present(data: [DataStoreModel])
+    func present(data: [InfoHubSubject])
 }
 
 final class InfoHubPresenter {
@@ -16,10 +16,9 @@ final class InfoHubPresenter {
     var viewController: InfoHubDisplayLogic?
 }
 
-
 // MARK: InfoHub Presentatioin Logic
 extension InfoHubPresenter: InfoHubPresentatioinLogic {
-    func present(data: [DataStoreModel]) {
+    func present(data: [InfoHubSubject]) {
         viewController?.showInfo(
             infoNewsCount: "News count is \(data.count.formatted())",
             lastInfoTitle: "Last news title \(data.last?.title ?? "")"

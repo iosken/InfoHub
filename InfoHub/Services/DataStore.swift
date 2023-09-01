@@ -7,25 +7,15 @@
 
 import Foundation
 
-// with imitation of random server json naming
-struct DataStoreModel {
-    var infoId: String
-    var title: String
-    var subTitle: String
-    var author: String
-    var siteLink: String
-    var image: String?
-}
-
 final class DataStore {
     static let shared = DataStore()
     
     private init() {}
     
-    func getTenInfoForHub() -> [DataStoreModel] {
-        var result: [DataStoreModel] = []
+    func getTenInfoForHub() -> [InfoHubSubject] {
+        var result: [InfoHubSubject] = []
         for currentId in 1...10 {
-            result.append(DataStoreModel(
+            result.append(InfoHubSubject(
                 infoId: currentId.formatted(),
                 title: "Абзац 1.10.32 de Finibus Bonorum et Malorum, написанный Цицероном в 45 году н.э.",
                 subTitle:

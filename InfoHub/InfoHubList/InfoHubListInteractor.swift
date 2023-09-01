@@ -11,17 +11,25 @@ protocol InfoHubListBusinessLogic {
     func fetchData()
 }
 
-final class InfoHubListInteractor {
+protocol InfoHubListDataStore {
+    var infoHubSubjects: [InfoHubSubject]? { get }
+}
+
+final class InfoHubListInteractor: InfoHubListDataStore {
     // MARK: - Public vars
     var infoHubListPresenter: InfoHubListPresenter?
+    
+    
+    // MARK: - InfoHubList Data Store
+    var infoHubSubjects: [InfoHubSubject]?
 }
 
 // MARK: BusinessLogic
 extension InfoHubListInteractor: InfoHubListBusinessLogic {
     func fetchData() {
-        let dataToPresent = DataStore.shared.getTenInfoForHub()
+        let infoHubSubjects = DataStore.shared.getTenInfoForHub()
 
-        infoHubListPresenter?.present(dataToPresent: dataToPresent)
+        infoHubListPresenter?.present(dataToPresent: infoHubSubjects)
     }
 }
 

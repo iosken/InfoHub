@@ -11,15 +11,20 @@ protocol InfoHubBusinessLogic {
     func getInfo()
 }
 
-final class InfoHubInteractor {
+protocol InfoHubDataStore {
+    var infoHubSubjects: [InfoHubSubject]? { get }
+}
+
+final class InfoHubInteractor: InfoHubDataStore {
     // MARK: External vars
     var infoHubPresenter: InfoHubPresentatioinLogic?
+    let infoHubSubjects: [InfoHubSubject]? = DataStore.shared.getTenInfoForHub()
 }
 
 // MARK: InfoHub Business Logic
 extension InfoHubInteractor: InfoHubBusinessLogic {
     func getInfo() {
-        infoHubPresenter?.present(data: DataStore.shared.getTenInfoForHub())
+        infoHubPresenter?.present(data: infoHubSubjects ?? [])
     }
 }
 
