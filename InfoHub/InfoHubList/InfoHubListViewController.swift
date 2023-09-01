@@ -78,7 +78,6 @@ final class InfoHubListViewController: UITableViewController {
 
 extension InfoHubListViewController: InfoHubListCellDelegate {
     func infoHubListCellTaped(with id: Int) {
-        if infoHubListRouter != nil {} else { print("No router found") }
         infoHubListRouter?.navigateToListDetails(infoHubCellID: id)
     }
 }

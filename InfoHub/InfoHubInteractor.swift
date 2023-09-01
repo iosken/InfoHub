@@ -18,7 +18,7 @@ protocol InfoHubDataStore {
 final class InfoHubInteractor: InfoHubDataStore {
     // MARK: External vars
     var infoHubPresenter: InfoHubPresentatioinLogic?
-    let infoHubSubjects: [InfoHubSubject]? = DataStore.shared.getTenInfoForHub()
+    let infoHubSubjects: [InfoHubSubject]? = DataStore.shared.getTenNews()
 }
 
 // MARK: InfoHub Business Logic

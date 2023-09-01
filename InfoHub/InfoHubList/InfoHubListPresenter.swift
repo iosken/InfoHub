@@ -12,6 +12,7 @@ protocol InfoHubListPresentationLogic {
 }
 
 final class InfoHubListPresenter {
+    // MARK: - Public vars
     var viewController: InfoHubListViewController?
 }
 
@@ -19,7 +20,7 @@ extension InfoHubListPresenter: InfoHubListPresentationLogic {
     func present(dataToPresent: [InfoHubSubject]) {
         let dataToDisplay = dataToPresent.map { dataStoreModel -> InfoHubListCellViewModel in
             InfoHubListCellViewModel(
-                infoId: Int(dataStoreModel.infoId) ?? 0,
+                infoId: Int(dataStoreModel.id) ?? 0,
                 infoTitle: dataStoreModel.title,
                 infoText: dataStoreModel.subTitle,
                 infoAutor: dataStoreModel.author

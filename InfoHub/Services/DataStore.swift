@@ -12,11 +12,11 @@ final class DataStore {
     
     private init() {}
     
-    func getTenInfoForHub() -> [InfoHubSubject] {
+    func getTenNews() -> [InfoHubSubject] {
         var result: [InfoHubSubject] = []
         for currentId in 1...10 {
             result.append(InfoHubSubject(
-                infoId: currentId.formatted(),
+                id: currentId.formatted(),
                 title: "Абзац 1.10.32 de Finibus Bonorum et Malorum, написанный Цицероном в 45 году н.э.",
                 subTitle:
 """

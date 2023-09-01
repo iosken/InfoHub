@@ -70,7 +70,9 @@
                             <constraint firstItem="jmh-Az-XW2" firstAttribute="trailing" secondItem="Wuu-RL-bGY" secondAttribute="trailing" id="eBu-vQ-EfU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yQd-go-lgS"/>
+                    <navigationItem key="navigationItem" id="yQd-go-lgS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="Mey-6g-9rN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="textLabelOutlet" destination="bVF-QB-fXv" id="mrQ-XL-5zG"/>
                         <outlet property="titleLabelOutlet" destination="TDb-L1-ZjY" id="rGg-m6-mYI"/>
@@ -100,6 +102,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

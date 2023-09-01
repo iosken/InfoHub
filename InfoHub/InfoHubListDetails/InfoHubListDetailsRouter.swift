@@ -16,6 +16,7 @@ protocol InfoHubListDetailsDataPassingProtocol {
 }
 
 final class InfoHubListDetailsRouter: InfoHubListDetailsDataPassingProtocol {
+    // MARK: Public vars
     var storeCellIndex: InfoHubListDetailsDataStore?
 }
 

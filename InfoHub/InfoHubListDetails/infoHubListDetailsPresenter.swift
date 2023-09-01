@@ -12,7 +12,7 @@ protocol infoHubListDetailsPresentationLogic {
 }
 
 final class infoHubListDetailsPresenter {
-    // MARK: Public properties
+    // MARK: Public vars
     weak var viewController: InfoHubListDetailsDisplayLogic?
 }
 

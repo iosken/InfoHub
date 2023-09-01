@@ -17,10 +17,11 @@ final class InfoHubListDetailsViewController: UIViewController {
     @IBOutlet var titleLabelOutlet: UILabel!
     @IBOutlet var textLabelOutlet: UILabel!
     
-    // MARK: - Public properties
+    // MARK: - Public vars
     var infoHubListDetailsInteractor: InfoHubListDetailsBusinessLogic?
     var infoHubListDetailsRouter: (InfoHubListDetailsRoutingLogic & InfoHubListDetailsDataPassingProtocol)?
     
+    // MARK: - Scene lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
@@ -32,7 +33,7 @@ final class InfoHubListDetailsViewController: UIViewController {
         InfoHubListDetailsConfigurator.shared.configure(with: self)
     }
     
-    // MARK: - Lifecycle methods
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         infoHubListDetailsInteractor?.fetchData()

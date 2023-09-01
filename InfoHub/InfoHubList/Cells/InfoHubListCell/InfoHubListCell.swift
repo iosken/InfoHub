@@ -32,12 +32,9 @@ final class InfoHubListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - IB Actions
     @IBAction func readButtonTaped() {
         guard let infoHubCellHubId = infoHubCellHubId else { return }
-        
-        print("infoHubCellHubId coming with \(infoHubCellHubId)")
-        
-        if delegate == nil { print("delegate is nil") }
         
         delegate?.infoHubListCellTaped(with: infoHubCellHubId)
     }

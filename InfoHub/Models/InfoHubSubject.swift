@@ -8,7 +8,7 @@
 import Foundation
 
 struct InfoHubSubject {
-    var infoId: String
+    var id: String
     var title: String
     var subTitle: String
     var author: String
