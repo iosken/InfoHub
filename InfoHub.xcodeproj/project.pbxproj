@@ -35,6 +35,7 @@
 		C34C16172AA1B64F00FC7A70 /* InfoHubSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16162AA1B64F00FC7A70 /* InfoHubSubject.swift */; };
 		C34C16192AA1DB9300FC7A70 /* InfoHubModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C16182AA1DB9300FC7A70 /* InfoHubModels.swift */; };
 		C34C161B2AA5C40900FC7A70 /* InfoHubListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C161A2AA5C40900FC7A70 /* InfoHubListModels.swift */; };
+		C366D14A2AA6D6D0002CC3BD /* InfoHubListDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C366D1492AA6D6D0002CC3BD /* InfoHubListDetailsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		C34C16162AA1B64F00FC7A70 /* InfoHubSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubSubject.swift; sourceTree = "<group>"; };
 		C34C16182AA1DB9300FC7A70 /* InfoHubModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubModels.swift; sourceTree = "<group>"; };
 		C34C161A2AA5C40900FC7A70 /* InfoHubListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListModels.swift; sourceTree = "<group>"; };
+		C366D1492AA6D6D0002CC3BD /* InfoHubListDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHubListDetailsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */,
 				C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */,
 				C34C16112AA06E5200FC7A70 /* InfoHubListDetailsConfigurator.swift */,
+				C366D1492AA6D6D0002CC3BD /* InfoHubListDetailsModel.swift */,
 			);
 			path = InfoHubListDetails;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				C34C15DB2A9DB19F00FC7A70 /* InfoHubViewController.swift in Sources */,
 				C34C16032A9F47F300FC7A70 /* InfoHubListConfigurator.swift in Sources */,
 				C34C15E62A9DC58200FC7A70 /* InfoHubInteractor.swift in Sources */,
+				C366D14A2AA6D6D0002CC3BD /* InfoHubListDetailsModel.swift in Sources */,
 				C34C160A2AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift in Sources */,
 				C34C15C42A9DAF7500FC7A70 /* SceneDelegate.swift in Sources */,
 				C34C15E82A9DC92500FC7A70 /* InfoHubConfigurator.swift in Sources */,

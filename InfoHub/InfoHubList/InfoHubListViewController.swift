@@ -54,7 +54,6 @@ final class InfoHubListViewController: UITableViewController {
         }
         
         cell.delegate = self
-        
         cell.setup(data: cellViewModel)
         
         return cell

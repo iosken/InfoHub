@@ -8,7 +8,7 @@
 import UIKit
 
 protocol InfoHubListDetailsDisplayLogic: AnyObject {
-    func displayContent(title: String, text: String)
+    func displayContent(view)
 }
 
 final class InfoHubListDetailsViewController: UIViewController {
