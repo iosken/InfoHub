@@ -179,8 +179,8 @@
 		C34C16042A9F531000FC7A70 /* InfoHubListDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */,
 				C34C160B2AA0331300FC7A70 /* InfoHubListDetailsViewController.storyboard */,
+				C34C16092AA032FE00FC7A70 /* InfoHubListDetailsViewController.swift */,
 				C34C160D2AA0672900FC7A70 /* InfoHubListDetailsInteractor.swift */,
 				C34C160F2AA06A1000FC7A70 /* infoHubListDetailsPresenter.swift */,
 				C34C16132AA0700000FC7A70 /* InfoHubListDetailsRouter.swift */,

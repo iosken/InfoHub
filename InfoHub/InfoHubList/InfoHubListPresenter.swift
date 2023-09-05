@@ -16,6 +16,7 @@ final class InfoHubListPresenter {
     weak var viewController: InfoHubListViewController?
 }
 
+// MARK: InfoHubListPresentationLogic
 extension InfoHubListPresenter: InfoHubListPresentationLogic {
     func present(dataToPresent: [InfoHubSubject]) {
         let rows = dataToPresent.map {

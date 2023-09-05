@@ -9,12 +9,8 @@ import Foundation
 
 enum InfoHub {
     
-    // MARK: - Use Cases
+    // MARK: - ShowInfo Use Case
     enum ShowInfo {
-        
-        struct Request {
-            // no data to request
-        }
         
         struct Response {
         let infoNewsCount: Int?
@@ -27,6 +23,5 @@ enum InfoHub {
         }
         
     }
-    
     
 }

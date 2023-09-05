@@ -55,7 +55,7 @@ final class InfoHubListViewController: UITableViewController {
         
         cell.delegate = self
         
-        cell.setup(data: rows[indexPath.row])
+        cell.setup(data: cellViewModel)
         
         return cell
     }
@@ -67,12 +67,14 @@ final class InfoHubListViewController: UITableViewController {
     
 }
 
+// MARK: InfoHubListCellDelegate
 extension InfoHubListViewController: InfoHubListCellDelegate {
     func infoHubListCellTaped(with id: Int) {
         infoHubListRouter?.navigateToListDetails(infoHubCellID: id)
     }
 }
 
+// MARK: InfoHubListDisplayLogic
 extension InfoHubListViewController: InfoHubListDisplayLogic {
     func displayInfo(viewModel: InfoHubList.ShowInfoHubList.viewModel) {
         rows = viewModel.rows

@@ -16,6 +16,8 @@ final class InfoHubListRouter {
     var viewController: UIViewController?
 }
 
+
+// MARK: InfoHubListRoutingLogic
 extension InfoHubListRouter: InfoHubListRoutingLogic {
     func navigateToListDetails(infoHubCellID: Int) {
         let infoHubListStoryboard = UIStoryboard.init(name: "InfoHubListDetailsViewController", bundle: nil)

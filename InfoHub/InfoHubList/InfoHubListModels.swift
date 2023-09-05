@@ -18,6 +18,7 @@ protocol InfoHubListCellViewModelProtocol {
 
 enum InfoHubList {
     
+    // MARK: - ShowInfoHubList Usecase
     enum ShowInfoHubList {
         struct Response {
             let infoHubSubjects: [InfoHubSubject]

@@ -38,6 +38,8 @@ final class InfoHubViewController: UIViewController {
     }
 }
 
+
+// MARK: - InfoHubDisplayLogic
 extension InfoHubViewController: InfoHubDisplayLogic {
     func showInfo(viewModel: InfoHub.ShowInfo.ViewModel) {
         infoNewsCountOutlet.text = viewModel.infoNewsCount

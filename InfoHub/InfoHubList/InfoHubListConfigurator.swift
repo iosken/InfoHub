@@ -13,6 +13,7 @@ final class InfoHubListConfigurator {
     private init() {}
 }
 
+// MARK: - InfoHubListConfigurator
 extension InfoHubListConfigurator {
     func configure(with viewController: InfoHubListViewController) {
         let interactor = InfoHubListInteractor()
