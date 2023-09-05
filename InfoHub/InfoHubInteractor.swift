@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InfoHubBusinessLogic {
-    func getInfo()
+    func provideShowInfo()
 }
 
 protocol InfoHubDataStore {
@@ -23,8 +23,12 @@ final class InfoHubInteractor: InfoHubDataStore {
 
 // MARK: InfoHub Business Logic
 extension InfoHubInteractor: InfoHubBusinessLogic {
-    func getInfo() {
-        infoHubPresenter?.present(data: infoHubSubjects ?? [])
+    func provideShowInfo() {
+        let response = InfoHub.ShowInfo.Response(
+            infoNewsCount: infoHubSubjects?.count,
+            lastInfoTitle: infoHubSubjects?.last?.title
+        )
+        infoHubPresenter?.present(response: response)
     }
 }
 

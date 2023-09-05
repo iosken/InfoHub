@@ -13,20 +13,17 @@ protocol InfoHubListPresentationLogic {
 
 final class InfoHubListPresenter {
     // MARK: - Public vars
-    var viewController: InfoHubListViewController?
+    weak var viewController: InfoHubListViewController?
 }
 
 extension InfoHubListPresenter: InfoHubListPresentationLogic {
     func present(dataToPresent: [InfoHubSubject]) {
-        let dataToDisplay = dataToPresent.map { dataStoreModel -> InfoHubListCellViewModel in
-            InfoHubListCellViewModel(
-                infoId: Int(dataStoreModel.id) ?? 0,
-                infoTitle: dataStoreModel.title,
-                infoText: dataStoreModel.subTitle,
-                infoAutor: dataStoreModel.author
-            )
+        let rows = dataToPresent.map {
+            InfoHubList.ShowInfoHubList.viewModel.InfoHubListCellViewModel(infoHubSubject: $0)
         }
         
-        viewController?.display(data: dataToDisplay)
+        let viewModel = InfoHubList.ShowInfoHubList.viewModel(rows: rows)
+        
+        viewController?.displayInfo(viewModel: viewModel)
     }
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol InfoHubDisplayLogic {
-    func showInfo(infoNewsCount: String, lastInfoTitle: String)
+protocol InfoHubDisplayLogic: AnyObject {
+    func showInfo(viewModel: InfoHub.ShowInfo.ViewModel)
 }
 
 final class InfoHubViewController: UIViewController {
@@ -30,7 +30,7 @@ final class InfoHubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoHubInteractor?.getInfo()
+        infoHubInteractor?.provideShowInfo()
     }
     
     @IBAction func showInfoHubListTaped() {
@@ -39,8 +39,8 @@ final class InfoHubViewController: UIViewController {
 }
 
 extension InfoHubViewController: InfoHubDisplayLogic {
-    func showInfo(infoNewsCount: String, lastInfoTitle: String) {
-        infoNewsCountOutlet.text = infoNewsCount
-        lastInfoTitleOutlet.text = lastInfoTitle
+    func showInfo(viewModel: InfoHub.ShowInfo.ViewModel) {
+        infoNewsCountOutlet.text = viewModel.infoNewsCount
+        lastInfoTitleOutlet.text = viewModel.lastInfoTitle
     }
 }

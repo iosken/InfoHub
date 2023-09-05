@@ -8,20 +8,26 @@
 import Foundation
 
 protocol InfoHubPresentatioinLogic {
-    func present(data: [InfoHubSubject])
+    func present(response: InfoHub.ShowInfo.Response)
 }
 
 final class InfoHubPresenter {
     // MARK: External vars
-    var viewController: InfoHubDisplayLogic?
+    weak var viewController: InfoHubDisplayLogic?
 }
 
 // MARK: InfoHub Presentatioin Logic
 extension InfoHubPresenter: InfoHubPresentatioinLogic {
-    func present(data: [InfoHubSubject]) {
-        viewController?.showInfo(
-            infoNewsCount: "News count is \(data.count.formatted())",
-            lastInfoTitle: "Last news title \(data.last?.title ?? "")"
+    func present(response: InfoHub.ShowInfo.Response) {
+        
+        let infoNewsCount = "News count is \(response.infoNewsCount?.formatted() ?? "")"
+        let lastInfoTitle = "Last news title \(response.lastInfoTitle ?? "")"
+        
+        let viewModel = InfoHub.ShowInfo.ViewModel(
+            infoNewsCount: infoNewsCount,
+            lastInfoTitle: lastInfoTitle
         )
+        
+        viewController?.showInfo(viewModel: viewModel)
     }
 }

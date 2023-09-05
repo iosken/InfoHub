@@ -12,7 +12,7 @@ protocol InfoHubListBusinessLogic {
 }
 
 protocol InfoHubListDataStore {
-    var infoHubSubjects: [InfoHubSubject]? { get }
+    var infoHubSubjects: [InfoHubSubject] { get }
 }
 
 final class InfoHubListInteractor: InfoHubListDataStore {
@@ -20,11 +20,11 @@ final class InfoHubListInteractor: InfoHubListDataStore {
     var infoHubListPresenter: InfoHubListPresenter?
     
     
-    // MARK: - InfoHubList Data Store
-    var infoHubSubjects: [InfoHubSubject]?
+    // MARK: - InfoHubListDataStore
+    let infoHubSubjects: [InfoHubSubject] = []
 }
 
-// MARK: BusinessLogic
+// MARK: InfoHubListBusinessLogic
 extension InfoHubListInteractor: InfoHubListBusinessLogic {
     func fetchData() {
         let infoHubSubjects = DataStore.shared.getTenNews()
