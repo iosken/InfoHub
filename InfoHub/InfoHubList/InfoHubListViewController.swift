@@ -8,7 +8,7 @@
 import UIKit
 
 protocol InfoHubListDisplayLogic: AnyObject {
-    func displayInfo(viewModel: InfoHubList.ShowInfoHubList.viewModel)
+    func displayInfo(viewModel: InfoHubList.ShowInfoHubList.ViewModel)
 }
 
 final class InfoHubListViewController: UITableViewController {
@@ -75,7 +75,7 @@ extension InfoHubListViewController: InfoHubListCellDelegate {
 
 // MARK: InfoHubListDisplayLogic
 extension InfoHubListViewController: InfoHubListDisplayLogic {
-    func displayInfo(viewModel: InfoHubList.ShowInfoHubList.viewModel) {
+    func displayInfo(viewModel: InfoHubList.ShowInfoHubList.ViewModel) {
         rows = viewModel.rows
         tableView.reloadData()
     }

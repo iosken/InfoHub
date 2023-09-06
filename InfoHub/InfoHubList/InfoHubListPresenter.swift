@@ -20,10 +20,10 @@ final class InfoHubListPresenter {
 extension InfoHubListPresenter: InfoHubListPresentationLogic {
     func present(dataToPresent: [InfoHubSubject]) {
         let rows = dataToPresent.map {
-            InfoHubList.ShowInfoHubList.viewModel.InfoHubListCellViewModel(infoHubSubject: $0)
+            InfoHubList.ShowInfoHubList.ViewModel.InfoHubListCellViewModel(infoHubSubject: $0)
         }
         
-        let viewModel = InfoHubList.ShowInfoHubList.viewModel(rows: rows)
+        let viewModel = InfoHubList.ShowInfoHubList.ViewModel(rows: rows)
         
         viewController?.displayInfo(viewModel: viewModel)
     }

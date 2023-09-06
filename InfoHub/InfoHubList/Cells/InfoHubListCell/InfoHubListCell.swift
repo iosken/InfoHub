@@ -40,7 +40,7 @@ final class InfoHubListCell: UITableViewCell {
     }
     
     func setup(data: InfoHubListCellViewModelProtocol) {
-        guard let data = data as? InfoHubList.ShowInfoHubList.viewModel.InfoHubListCellViewModel else { return }
+        guard let data = data as? InfoHubList.ShowInfoHubList.ViewModel.InfoHubListCellViewModel else { return }
         infoHubCellHubId = data.infoId
         titleInfoLabel.text = "\(data.infoId) " + data.infoTitle
         textPreviewLabel.text = data.infoText

@@ -19,10 +19,12 @@ final class infoHubListDetailsPresenter {
 // MARK: - infoHubListDetails Presentation Logic
 extension infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic {
     func present(response: InfoHubSubject) {
-        let title = response.title
-        let text = response.subTitle
+        let viewModel = InfoHubListDetails.ShowInfoHubListDetails.ViewModel(
+            title: response.title,
+            text: response.subTitle
+        )
         
-        viewController?.displayContent(title: title, text: text)
+        viewController?.displayContent(viewModel: viewModel)
     }
 }
 

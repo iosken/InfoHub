@@ -24,7 +24,7 @@ enum InfoHubList {
             let infoHubSubjects: [InfoHubSubject]
         }
         
-        struct viewModel {
+        struct ViewModel {
             struct InfoHubListCellViewModel: InfoHubListCellViewModelProtocol {
                 var infoId: Int {
                     Int(infoHubSubject.id) ?? 0

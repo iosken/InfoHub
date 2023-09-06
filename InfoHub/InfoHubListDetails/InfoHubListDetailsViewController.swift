@@ -8,7 +8,7 @@
 import UIKit
 
 protocol InfoHubListDetailsDisplayLogic: AnyObject {
-    func displayContent(view)
+    func displayContent(viewModel: InfoHubListDetails.ShowInfoHubListDetails.ViewModel)
 }
 
 final class InfoHubListDetailsViewController: UIViewController {
@@ -43,8 +43,8 @@ final class InfoHubListDetailsViewController: UIViewController {
 
 // MARK: - InfoHubListDetails Display Logic
 extension InfoHubListDetailsViewController: InfoHubListDetailsDisplayLogic {
-    func displayContent(title: String, text: String) {
-        titleLabelOutlet.text = title
-        textLabelOutlet.text = text
+    func displayContent(viewModel: InfoHubListDetails.ShowInfoHubListDetails.ViewModel) {
+        titleLabelOutlet.text = viewModel.title
+        textLabelOutlet.text = viewModel.text
     }
 }
