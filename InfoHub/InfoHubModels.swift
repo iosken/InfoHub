@@ -13,8 +13,8 @@ enum InfoHub {
     enum ShowInfo {
         
         struct Response {
-        let infoNewsCount: Int?
-        let lastInfoTitle: String?
+            let infoNewsCount: Int?
+            let lastInfoTitle: String?
         }
         
         struct ViewModel {

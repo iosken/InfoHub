@@ -8,7 +8,7 @@
 import UIKit
 
 protocol infoHubListDetailsPresentationLogic {
-    func present(response: InfoHubSubject)
+    func present(response: InfoHubListDetails.ShowInfoHubListDetails.Response)
 }
 
 final class infoHubListDetailsPresenter {
@@ -18,7 +18,8 @@ final class infoHubListDetailsPresenter {
 
 // MARK: - infoHubListDetails Presentation Logic
 extension infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic {
-    func present(response: InfoHubSubject) {
+    
+    func present(response: InfoHubListDetails.ShowInfoHubListDetails.Response) {
         let viewModel = InfoHubListDetails.ShowInfoHubListDetails.ViewModel(
             title: response.title,
             text: response.subTitle
@@ -26,6 +27,7 @@ extension infoHubListDetailsPresenter: infoHubListDetailsPresentationLogic {
         
         viewController?.displayContent(viewModel: viewModel)
     }
+    
 }
 
 

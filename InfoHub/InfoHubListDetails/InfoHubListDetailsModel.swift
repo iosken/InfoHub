@@ -12,7 +12,8 @@ enum InfoHubListDetails {
     enum ShowInfoHubListDetails {
         
         struct Response {
-            let infoHubSubject: InfoHubSubject
+            var title: String
+            var subTitle: String
         }
         
         struct ViewModel {

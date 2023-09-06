@@ -30,6 +30,11 @@ extension InfoHubListDetailsInteractor: InfoHubListDetailsBusinessLogic {
         infoHubSubjects = DataStore.shared.getTenNews()[cellID]
         guard let infoHubSubjects = infoHubSubjects else { return }
         
-        infoHubListDetailsPresenter?.present(response: infoHubSubjects)
+        let response = InfoHubListDetails.ShowInfoHubListDetails.Response(
+            title: infoHubSubjects.title,
+            subTitle: infoHubSubjects.subTitle
+        )
+        
+        infoHubListDetailsPresenter?.present(response: response)
     }
 }
